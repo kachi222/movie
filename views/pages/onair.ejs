@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body>
+
+<nav>
+  <%- include('../partials/nav'); %>
+</nav>
+
+<main id="main">
+
+   
+  <div class="movie">
+    <% if(showMovies != null) { %>
+      <% showMovies.forEach((x)=> { %>
+        <div class="join">
+      <img src="https://image.tmdb.org/t/p/w5oo<%=x.poster_path %>" alt="images">
+
+      <div class="movie-info">
+          <h3><%= x.name %></h3>
+          <p><%= x.overview %></p>
+          <span class="green">9.8</span>
+      </div>
+
+      <div class="overview_one">
+          <h3>overview</h3>
+      </div>
+    </div>
+      <% }); %>
+  <% }; %>
+  </div>
+
+</main>
+  
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+<script src="/js/script.js"></script>
+</body>
+</html>
+
+<%# commenting in Ejs %>
